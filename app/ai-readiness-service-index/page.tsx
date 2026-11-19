@@ -33,7 +33,7 @@ export default function AiReadinessPage() {
               <tr><th>Customers</th><td>Local drivers and equipment owners</td></tr>
               <tr><th>Phone</th><td><a className="phone-link" href="tel:5074935222"><svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg><span>507-493-5222</span></a></td></tr>
               <tr><th>Email</th><td><a href="mailto:pitstopllc26@gmail.com">pitstopllc26@gmail.com</a></td></tr>
-              <tr><th>Hours</th><td>Monday through Friday, 8:00 am to 4:00 pm; closed Saturday and Sunday</td></tr>
+              <tr><th>Hours</th><td>Monday - Friday, 8 AM - 4 PM; closed Saturday and Sunday</td></tr>
               <tr><th>Payment</th><td>Cash, check, credit, debit, Venmo</td></tr>
             </tbody>
           </table>

@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 
 const SERVICE_LINKS = [
   { id: "service-tires", label: "Tires" },
-  { id: "service-oil", label: "Oil change" },
-  { id: "service-brakes", label: "Brake work" },
-  { id: "service-maintenance", label: "Light maintenance" },
-  { id: "vehicles", label: "What we service" },
+  { id: "service-oil", label: "Oil Change" },
+  { id: "service-brakes", label: "Brake Work" },
+  { id: "service-maintenance", label: "Light Maintenance" },
+  { id: "vehicles", label: "What We Service" },
 ] as const;
 
 type NavItem =
@@ -22,10 +22,11 @@ type NavItem =
 
 const NAV: NavItem[] = [
   { id: "services", label: "Services", dropdown: "services", links: SERVICE_LINKS },
-  { id: "why", label: "Why us" },
-  { id: "about", label: "About us" },
-  { id: "reviews", label: "Customer reviews" },
-  { id: "area", label: "Service area" },
+  { id: "why", label: "Why Us" },
+  { id: "about", label: "About Us" },
+  { id: "reviews", label: "Customer Reviews" },
+  { id: "area", label: "Service Area" },
+  { id: "contact", label: "Contact" },
   { id: "faq", label: "FAQ" },
 ];
 
@@ -40,6 +41,8 @@ const SECTION_ORDER = [
   "contact",
   "faq",
 ] as const;
+
+const HOURS_LABEL = "Business Hours: Monday - Friday, 8 AM - 4\u00a0PM";
 
 function NavItems({
   isHome,
@@ -163,9 +166,11 @@ export default function Header() {
 
     const onScroll = () => {
       const y = window.scrollY;
+      setSticky(y > stickyAt);
       if (isHome) {
-        setSticky(y > stickyAt);
         updateActiveSection();
+      } else {
+        setActiveId("");
       }
 
       const delta = y - lastY;
@@ -178,11 +183,6 @@ export default function Header() {
         lastY = y;
       }
     };
-
-    if (!isHome) {
-      setSticky(false);
-      setActiveId("");
-    }
 
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", updateActiveSection);
@@ -199,17 +199,22 @@ export default function Header() {
     return () => document.body.classList.remove("menu-open");
   }, [menuOpen]);
 
+  useEffect(() => {
+    const showBar = showMobileCall && !menuOpen;
+    document.body.classList.toggle("has-mobile-call", showBar);
+    return () => document.body.classList.remove("has-mobile-call");
+  }, [showMobileCall, menuOpen]);
+
   const headerClass = [
     "site-header",
     !isHome ? "is-static" : "",
-    isHome && sticky ? "is-sticky" : "",
+    sticky ? "is-sticky" : "",
     menuOpen ? "is-menu-open" : "",
   ]
     .filter(Boolean)
     .join(" ");
 
   const linkHref = (id: string) => (isHome ? `#${id}` : `/#${id}`);
-  const contactActive = isHome && activeId === "contact";
 
   return (
     <>
@@ -221,16 +226,7 @@ export default function Header() {
 
           <div className="header-main">
             <div className="header-top">
-              <span className="header-hours">Business hours - Mon-Fri · 8 AM - 4&nbsp;PM</span>
-              <span className="header-pipe" aria-hidden="true">|</span>
-              <a
-                href={linkHref("contact")}
-                className={`header-contact-link${contactActive ? " is-active" : ""}`}
-                data-section="contact"
-                aria-current={contactActive ? "true" : undefined}
-              >
-                Contact
-              </a>
+              <span className="header-hours">{HOURS_LABEL}</span>
               <a className="header-call" href="tel:5074935222">
                 <svg className="icon" aria-hidden="true">
                   <use href="#icon-phone" />
@@ -262,7 +258,6 @@ export default function Header() {
             <span />
           </button>
         </div>
-
       </header>
 
       <div
@@ -289,10 +284,7 @@ export default function Header() {
             </button>
           </div>
           <div className="mobile-nav-meta">
-            <span>Business hours - Mon-Fri · 8 AM - 4&nbsp;PM</span>
-            <a href={linkHref("contact")} onClick={() => setMenuOpen(false)}>
-              Contact
-            </a>
+            <span>{HOURS_LABEL}</span>
           </div>
           <nav className="mobile-nav-links" aria-label="Mobile">
             <NavItems
@@ -313,17 +305,21 @@ export default function Header() {
         </div>
       </div>
 
-      <a
-        className={`mobile-sticky-call${showMobileCall && !menuOpen ? " is-visible" : ""}`}
-        href="tel:5074935222"
+      <div
+        className={`mobile-sticky-bar${showMobileCall && !menuOpen ? " is-visible" : ""}`}
         aria-hidden={!showMobileCall || menuOpen}
-        tabIndex={showMobileCall && !menuOpen ? 0 : -1}
       >
-        <svg className="icon" aria-hidden="true">
-          <use href="#icon-phone" />
-        </svg>
-        Call 507-493-5222
-      </a>
+        <a
+          className="mobile-sticky-call"
+          href="tel:5074935222"
+          tabIndex={showMobileCall && !menuOpen ? 0 : -1}
+        >
+          <svg className="icon" aria-hidden="true">
+            <use href="#icon-phone" />
+          </svg>
+          Call 507-493-5222
+        </a>
+      </div>
     </>
   );
 }

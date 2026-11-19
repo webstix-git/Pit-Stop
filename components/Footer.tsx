@@ -43,22 +43,22 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4>Quick Links</h4>
+            <h4>Quick links</h4>
             <ul>
               <li>
                 <a href="/#services">Services</a>
               </li>
               <li>
-                <a href="/#why">Why us</a>
+                <a href="/#why">Why Us</a>
               </li>
               <li>
-                <a href="/#about">About us</a>
+                <a href="/#about">About Us</a>
               </li>
               <li>
-                <a href="/#reviews">Customer reviews</a>
+                <a href="/#reviews">Customer Reviews</a>
               </li>
               <li>
-                <a href="/#area">Service area</a>
+                <a href="/#area">Service Area</a>
               </li>
               <li>
                 <a href="/#contact">Contact</a>
@@ -71,7 +71,7 @@ export default function Footer() {
 
           <div className="footer-col footer-meta">
             <div className="footer-social">
-              <span>Find us online</span>
+              <span>Find Us Online</span>
               <a
                 href="https://www.facebook.com/profile.php?id=61589255056547"
                 target="_blank"
@@ -84,11 +84,11 @@ export default function Footer() {
               </a>
             </div>
             <div className="footer-hours">
-              <span className="label">Business hours</span>
+              <span className="label">Business Hours</span>
               <p>
-                Mon - Fri: 8:00 am - 4:00&nbsp;pm
+                Monday - Friday: 8 AM - 4&nbsp;PM
                 <br />
-                Sat &amp; Sun:&nbsp;Closed
+                Saturday &amp; Sunday:&nbsp;Closed
               </p>
             </div>
             <div className="footer-pay">
