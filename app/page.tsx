@@ -1,3 +1,6 @@
+import ContactForm from "../components/ContactForm";
+import PaymentIcons from "../components/PaymentIcons";
+
 export default function HomePage() {
   return (
 <main id="top">
@@ -29,10 +32,6 @@ export default function HomePage() {
               507-493-5222
             </a>
           </div>
-          <div>
-            <span className="meta-label">Payment</span>
-            <span className="meta-value">Cash · Check · Card ·&nbsp;Venmo</span>
-          </div>
         </div>
       </div>
     </section>
@@ -54,10 +53,10 @@ export default function HomePage() {
             <div className="eyebrow">Services</div>
             <h2>The routine stuff, and the&nbsp;surprises</h2>
           </div>
-          <p className="section-intro">Most of what we do is regular upkeep. Some of it is a flat tire you didn't plan on. Either way, give us a call and we'll get you back on the road, the trail or the&nbsp;lawn.</p>
+          <p className="section-intro">Most of what we do is regular upkeep. Some of it is a flat tire you didn&apos;t plan on. Either way, give us a call and we&apos;ll get you back on the road, the trail or the&nbsp;lawn.</p>
         </div>
         <div className="services-grid">
-          <article className="service-card">
+          <article className="service-card" id="service-tires">
             <div className="service-media">
               <img src="/assets/car-tire.jpg" alt="Mechanic handling a car tire" />
             </div>
@@ -70,7 +69,7 @@ export default function HomePage() {
               <p>Flat or slow leak? We repair tires on cars, pickups, SUVs, side-by-sides and&nbsp;4-wheelers.</p>
             </div>
           </article>
-          <article className="service-card">
+          <article className="service-card" id="service-oil">
             <div className="service-media">
               <img src="/assets/oil-change.jpg" alt="Mechanic pouring fresh oil during an oil change" />
             </div>
@@ -83,7 +82,7 @@ export default function HomePage() {
               <p>Fresh oil for the car you drive to work, the side-by-side you ride on weekends and the mower that keeps the yard in&nbsp;shape.</p>
             </div>
           </article>
-          <article className="service-card">
+          <article className="service-card" id="service-brakes">
             <div className="service-media">
               <img src="/assets/brake-work.jpg" alt="Mechanic installing a brake caliper" />
             </div>
@@ -93,10 +92,10 @@ export default function HomePage() {
                 <span className="service-tag">Cars · Trucks ·&nbsp;UTVs</span>
               </div>
               <h3>Brake work</h3>
-              <p>Squealing, grinding or a pedal that feels soft? Bring it in and we'll take a&nbsp;look.</p>
+              <p>Squealing, grinding or a pedal that feels soft? Bring it in and we&apos;ll take a&nbsp;look.</p>
             </div>
           </article>
-          <article className="service-card">
+          <article className="service-card" id="service-maintenance">
             <div className="service-media">
               <img src="/assets/maintenance.jpg" alt="Mechanic performing light maintenance under the hood" />
             </div>
@@ -106,39 +105,64 @@ export default function HomePage() {
                 <span className="service-tag">Everything we&nbsp;service</span>
               </div>
               <h3>Light maintenance</h3>
-              <p>The smaller jobs that keep things running, and most minor repairs too. If it's on your list, ask&nbsp;us.</p>
+              <p>The smaller jobs that keep things running, and most minor repairs too. If it&apos;s on your list, ask&nbsp;us.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-        <section id="why" className="why" data-screen-label="Why Choose Us">
-      <div className="container why-inner">
-        <div className="eyebrow dark">Why choose us</div>
-        <h2>Why folks pick <span style={{color: 'var(--red)'}}>Pit&nbsp;Stop</span></h2>
-        <div className="why-grid">
-          <div className="why-card">
-            <h3>Honest work</h3>
-            <p>We'll tell you what needs doing now and what can&nbsp;wait.</p>
+    <section id="vehicles" className="vehicles" data-screen-label="What We Service">
+      <div className="container vehicles-inner">
+        <div className="section-head">
+          <div className="section-head-copy">
+            <div className="eyebrow dark">What we service</div>
+            <h2>Road, trail<br />or&nbsp;yard.</h2>
           </div>
-          <div className="why-card">
-            <h3>Done right</h3>
-            <p>We take the time to do the job properly, so you're not back next week for the same&nbsp;thing.</p>
-          </div>
-          <div className="why-card">
-            <h3>Fair prices</h3>
-            <p>Small-town shop, small-town prices. No surprises on the&nbsp;bill.</p>
-          </div>
-          <div className="why-card">
-            <h3>Friendly service</h3>
-            <p>Pull in, say hi, ask questions. That's how a local shop should&nbsp;feel.</p>
-          </div>
+          <p className="section-intro vehicles-intro">Not sure we work on yours? Just ask. Chances are we can help, and if we can&apos;t, we&apos;ll tell you&nbsp;straight.</p>
+        </div>
+        <div className="vehicles-grid">
+          <article className="vehicle-card">
+            <img src="/assets/cars.jpg" alt="Cars lined up at a service lot" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">Cars</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/pickups.jpg" alt="White pickup truck" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">Pickups</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/suvs.jpg" alt="Blue SUV parked outdoors" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">SUVs</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/utv.jpg" alt="Side-by-side" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">Side-by-sides</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/4-wheelers.jpg" alt="Red 4-wheelers on sand" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">4-wheelers</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/lawnmowers.jpg" alt="Walk-behind lawnmower on a lawn" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">Lawnmowers</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-<section id="about" className="section" data-screen-label="About">
+    <section id="about" className="section" data-screen-label="About">
       <div className="container about-grid">
         <div className="about-photo-wrap">
           <div className="about-corner" aria-hidden="true"></div>
@@ -153,109 +177,202 @@ export default function HomePage() {
           <div className="eyebrow">About Pit&nbsp;Stop</div>
           <h2>A family shop in&nbsp;Mabel</h2>
           <p>We opened Pit Stop in 2026 to give folks around Mabel one friendly place to bring all of it: the car, the pickup, the side-by-side and the&nbsp;mower.</p>
-          <p>We're a small-town business and we run it like one. You get honest answers, careful work and a fair bill, from people who are glad you stopped in. Keeping your equipment in shape shouldn't be a hassle, and we work to keep it that&nbsp;way.</p>
+          <p>We&apos;re a small-town business and we run it like one. You get honest answers, careful work and a fair bill, from people who are glad you stopped in. Keeping your equipment in shape shouldn&apos;t be a hassle, and we work to keep it that&nbsp;way.</p>
         </div>
       </div>
     </section>
 
-        <section id="reviews" className="section reviews" data-screen-label="Google reviews">
+    <section id="why" className="why" data-screen-label="Why Choose Us">
+      <div className="container why-inner">
+        <div className="eyebrow dark">Why choose us</div>
+        <h2>Why folks pick <span style={{color: 'var(--red)'}}>Pit&nbsp;Stop</span></h2>
+        <div className="why-grid">
+          <div className="why-card">
+            <h3>Honest work</h3>
+            <p>We&apos;ll tell you what needs doing now and what can&nbsp;wait.</p>
+          </div>
+          <div className="why-card">
+            <h3>Done right</h3>
+            <p>We take the time to do the job properly, so you&apos;re not back next week for the same&nbsp;thing.</p>
+          </div>
+          <div className="why-card">
+            <h3>Fair prices</h3>
+            <p>Small-town shop, small-town prices. No surprises on the&nbsp;bill.</p>
+          </div>
+          <div className="why-card">
+            <h3>Friendly service</h3>
+            <p>Pull in, say hi, ask questions. That&apos;s how a local shop should&nbsp;feel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" className="section reviews" data-screen-label="Customer reviews">
       <div className="container">
         <div className="section-head">
           <div className="section-head-copy">
-            <div className="eyebrow">Google reviews</div>
+            <div className="eyebrow">Customer reviews</div>
             <h2>Word around&nbsp;Mabel</h2>
           </div>
         </div>
         <div className="reviews-grid">
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Nicholas Martins</span>
+              </div>
+              <span className="review-time">a month ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★★</div>
               <blockquote>Kaiser knows his stuff!! Go see&nbsp;him!!</blockquote>
             </div>
-            <figcaption>
-              <span>Nicholas Martins</span>
-              <span>Google review · a month ago</span>
-            </figcaption>
           </figure>
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Nathan</span>
+              </div>
+              <span className="review-time">a week ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★★</div>
-              <blockquote className="review-rating-only">5-star rating on Google (no written&nbsp;review).</blockquote>
             </div>
-            <figcaption>
-              <span>Nathan</span>
-              <span>Google review · a week ago</span>
-            </figcaption>
           </figure>
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Lee Senne</span>
+              </div>
+              <span className="review-time">5 years ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★★</div>
               <blockquote>Great job on any work I bring&nbsp;in!</blockquote>
             </div>
-            <figcaption>
-              <span>Lee Senne</span>
-              <span>Google review · 5 years ago</span>
-            </figcaption>
           </figure>
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Juan Rosas</span>
+              </div>
+              <span className="review-time">4 years ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★</div>
               <blockquote>Fast and friendly&nbsp;service.</blockquote>
             </div>
-            <figcaption>
-              <span>Juan Rosas</span>
-              <span>Google review · 4 years ago</span>
-            </figcaption>
           </figure>
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Bob Snedden-Fitler</span>
+              </div>
+              <span className="review-time">7 years ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★★</div>
               <blockquote>Good shop to get your work&nbsp;done</blockquote>
             </div>
-            <figcaption>
-              <span>Bob Snedden-Fitler</span>
-              <span>Google review · 7 years ago</span>
-            </figcaption>
           </figure>
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Chris Sauer</span>
+              </div>
+              <span className="review-time">9 years ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★★</div>
               <blockquote>Because of BP gas stations using green nozzles for gas instead of diesel we put gas in our diesel truck. Duane came to our rescue on a late Friday afternoon. He towed us to his garage and spent 4 hours working on our truck. He was very professional, skilled and thoughtful. He did this all during a cold hard driving rain. We are very thankful to him. Highly&nbsp;recommend.</blockquote>
             </div>
-            <figcaption>
-              <span>Chris Sauer</span>
-              <span>Google review · 9 years ago</span>
-            </figcaption>
           </figure>
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Senne Outdoors</span>
+              </div>
+              <span className="review-time">6 years ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★★</div>
-              <blockquote className="review-rating-only">5-star rating on Google (no written&nbsp;review).</blockquote>
             </div>
-            <figcaption>
-              <span>Senne Outdoors</span>
-              <span>Google review · 6 years ago</span>
-            </figcaption>
           </figure>
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Justin Trosper</span>
+              </div>
+              <span className="review-time">7 years ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★★</div>
-              <blockquote className="review-rating-only">5-star rating on Google (no written&nbsp;review).</blockquote>
             </div>
-            <figcaption>
-              <span>Justin Trosper</span>
-              <span>Google review · 7 years ago</span>
-            </figcaption>
           </figure>
           <figure className="review-card">
-            <div>
+            <figcaption>
+              <div className="review-author">
+                <svg className="review-google" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span className="review-name">Amber Helgeson</span>
+              </div>
+              <span className="review-time">9 years ago</span>
+            </figcaption>
+            <div className="review-body">
               <div className="review-stars">★★★★</div>
-              <blockquote className="review-rating-only">4-star rating on Google (no written&nbsp;review).</blockquote>
             </div>
-            <figcaption>
-              <span>Amber Helgeson</span>
-              <span>Google review · 9 years ago</span>
-            </figcaption>
           </figure>
         </div>
         <div className="reviews-cta">
@@ -264,15 +381,15 @@ export default function HomePage() {
       </div>
     </section>
 
-        <section id="faq" className="section faq" data-screen-label="FAQ">
+    <section id="faq" className="section faq" data-screen-label="FAQ">
       <div className="container faq-layout">
         <div className="faq-left">
           <div className="eyebrow dark">FAQ</div>
           <h2>Before you stop&nbsp;in</h2>
-          <p>Didn't find your answer? Call us at
-            <a className="phone-link" href="tel:5074935222">
+          <p>Didn&apos;t find your answer? Call us at{" "}
+            <a className="phone-link faq-phone" href="tel:5074935222">
               <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
-              507-493-5222
+              <span>507-493-5222</span>
             </a>.
           </p>
           <img className="faq-tires" src="/assets/tires.png" alt="Stack of tires" />
@@ -287,53 +404,32 @@ export default function HomePage() {
             <p className="faq-a">Oil changes, tire repairs, brake work and other light maintenance, plus most minor&nbsp;repairs.</p>
           </div>
           <div className="faq-item">
-            <h3 className="faq-q">What if I'm not sure you can fix&nbsp;it?</h3>
-            <p className="faq-a">Just ask. Call us
-              <a className="phone-link" href="tel:5074935222">
+            <h3 className="faq-q">What if I&apos;m not sure you can fix&nbsp;it?</h3>
+            <p className="faq-a">Just ask. Call us{" "}
+              <a className="phone-link faq-phone" href="tel:5074935222">
                 <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
-                507-493-5222
+                <span>507-493-5222</span>
               </a>,
-              tell us what's going on, and we'll let you know whether it's something we can take care&nbsp;of.</p>
+              tell us what&apos;s going on, and we&apos;ll let you know whether it&apos;s something we can take care&nbsp;of.</p>
           </div>
           <div className="faq-item">
             <h3 className="faq-q">How can I&nbsp;pay?</h3>
             <p className="faq-a">Cash, check, credit, debit or&nbsp;Venmo.</p>
+            <PaymentIcons className="faq-pay-icons" />
           </div>
           <div className="faq-item">
             <h3 className="faq-q">When are you&nbsp;open?</h3>
-            <p className="faq-a">Monday through Friday, 8 am to 4 pm. We're closed on&nbsp;weekends.</p>
+            <p className="faq-a">Monday through Friday, 8 am to 4 pm. We&apos;re closed on&nbsp;weekends.</p>
           </div>
           <div className="faq-item">
             <h3 className="faq-q">Where are&nbsp;you?</h3>
             <p className="faq-a"><a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a></p>
           </div>
           <div className="faq-item">
-            <h3 className="faq-q">If you don't know if we can help, just&nbsp;ask!</h3>
+            <h3 className="faq-q">If you don&apos;t know if we can help, just&nbsp;ask!</h3>
             <p className="faq-a">We are here to help if we can with all your maintenance and most of your repair needs. Make Pit Stop your next&nbsp;stop!</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="area" className="area" data-screen-label="Service Area">
-      <div className="area-copy-wrap">
-        <div className="area-copy">
-          <div className="eyebrow">Service area</div>
-          <h2>Right here in&nbsp;Mabel</h2>
-          <div className="area-address">
-            <p>We're on West Prairie Avenue and happy to help anyone from Mabel and the surrounding&nbsp;area.</p>
-            <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
-          </div>
-          <a className="btn btn-cream" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
-        </div>
-      </div>
-      <div className="area-map">
-        <iframe
-          title="Map to Pit Stop"
-          src="https://www.google.com/maps?q=102+W+Prairie+Ave,+Mabel,+MN+55954&z=15&output=embed"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen></iframe>
       </div>
     </section>
 
@@ -362,47 +458,40 @@ export default function HomePage() {
                 <span className="label">Hours</span>
                 <span className="value">Mon - Fri: 8:00 am - 4:00&nbsp;pm<br />Sat &amp; Sun:&nbsp;Closed</span>
               </div>
-              <div>
+              <div className="contact-pay">
                 <span className="label">Payment</span>
-                <span className="value">Cash, check, credit, debit,&nbsp;Venmo</span>
+                <PaymentIcons />
               </div>
             </div>
           </div>
         </div>
-        <form className="contact-form" id="contact-form" action="/thank-you" method="get">
-          <div className="form-fields">
-            <h3>Tell us what's going&nbsp;on</h3>
-            <p className="form-note">Fields marked with an asterisk (*) are&nbsp;required.</p>
-            <div className="form-row">
-              <label className="field">
-                <span className="field-label">Name<span className="req">*</span></span>
-                <input type="text" name="name" autoComplete="name" required />
-              </label>
-              <label className="field">
-                <span className="field-label">Phone<span className="req">*</span></span>
-                <input type="tel" name="phone" autoComplete="tel" required />
-              </label>
-            </div>
-            <label className="field">
-              <span className="field-label">Vehicle / equipment<span className="req">*</span></span>
-              <select name="vehicle" required>
-                <option value="">Select an option</option>
-                <option>Car, pickup or&nbsp;SUV</option>
-                <option>Side-by-side /&nbsp;UTV</option>
-                <option>4-wheeler</option>
-                <option>Lawnmower</option>
-                <option>Not sure, just&nbsp;asking</option>
-              </select>
-            </label>
-            <label className="field">
-              <span className="field-label">What's the problem?<span className="req">*</span></span>
-              <textarea name="message" rows={4} required></textarea>
-            </label>
-            <button className="form-submit" type="submit">Send</button>
-          </div>
-        </form>
+        <ContactForm />
       </div>
     </section>
+
+    <section id="area" className="area" data-screen-label="Service Area">
+      <div className="area-copy-wrap">
+        <div className="area-copy">
+          <div className="eyebrow">Service area</div>
+          <h2>Right here in&nbsp;Mabel</h2>
+          <div className="area-address">
+            <p>We&apos;re on West Prairie Avenue and happy to help anyone from Mabel and the surrounding&nbsp;area.</p>
+            <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
+          </div>
+          <a className="btn btn-cream" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
+        </div>
+      </div>
+      <div className="area-map">
+        <iframe
+          title="Map to Pit Stop"
+          src="https://www.google.com/maps?q=102+W+Prairie+Ave,+Mabel,+MN+55954&z=15&output=embed"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen></iframe>
+      </div>
+    </section>
+
+    <div className="area-footer-sep" aria-hidden="true"></div>
   </main>
   );
 }

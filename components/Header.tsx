@@ -3,26 +3,44 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-const NAV = [
-  { id: "top", label: "Home" },
-  { id: "services", label: "Services" },
-  { id: "why", label: "Why choose us" },
-  { id: "about", label: "About us" },
-  { id: "faq", label: "FAQ" },
-  { id: "reviews", label: "Google reviews" },
-  { id: "area", label: "Service area" },
-  { id: "contact", label: "Contact" },
+const SERVICE_LINKS = [
+  { id: "service-tires", label: "Tires" },
+  { id: "service-oil", label: "Oil change" },
+  { id: "service-brakes", label: "Brake work" },
+  { id: "service-maintenance", label: "Light maintenance" },
+  { id: "vehicles", label: "What we service" },
 ] as const;
+
+type NavItem =
+  | { id: string; label: string; dropdown?: undefined; links?: undefined }
+  | {
+      id: string;
+      label: string;
+      dropdown: "services";
+      links: readonly { id: string; label: string }[];
+    };
+
+const NAV: NavItem[] = [
+  { id: "top", label: "Home" },
+  { id: "services", label: "Services", dropdown: "services", links: SERVICE_LINKS },
+  { id: "about", label: "About us" },
+  { id: "why", label: "Why us" },
+  { id: "reviews", label: "Customer reviews" },
+  { id: "faq", label: "FAQ" },
+  { id: "contact", label: "Contact" },
+  { id: "area", label: "Service area" },
+];
 
 const SECTION_ORDER = [
   "top",
   "services",
-  "why",
+  "vehicles",
   "about",
+  "why",
   "reviews",
   "faq",
-  "area",
   "contact",
+  "area",
 ] as const;
 
 export default function Header() {
@@ -30,6 +48,7 @@ export default function Header() {
   const isHome = pathname === "/";
   const [sticky, setSticky] = useState(false);
   const [activeId, setActiveId] = useState("top");
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const header = document.getElementById("site-header");
@@ -47,6 +66,9 @@ export default function Header() {
         if (el.getBoundingClientRect().top - headerOffset <= 0) {
           nextActive = id;
         }
+      }
+      if (nextActive === "vehicles" || nextActive.startsWith("service-")) {
+        nextActive = "services";
       }
       setActiveId(nextActive);
     };
@@ -82,20 +104,67 @@ export default function Header() {
     .filter(Boolean)
     .join(" ");
 
+  const linkHref = (id: string) => (isHome ? `#${id}` : `/#${id}`);
+
   return (
     <header className={headerClass} id="site-header">
       <div className="container header-inner">
-        <a href={isHome ? "#top" : "/#top"} className="logo-link">
+        <a href={linkHref("top")} className="logo-link">
           <img src="/assets/logo.png" alt="Pit Stop logo" />
         </a>
         <nav className="site-nav" aria-label="Primary">
           {NAV.map((item) => {
-            const href = isHome ? `#${item.id}` : `/#${item.id}`;
+            if (item.dropdown && item.links) {
+              const active = isHome && activeId === item.id;
+              return (
+                <div
+                  key={item.id}
+                  className={`nav-item has-dropdown${servicesOpen ? " is-open" : ""}${active ? " is-active" : ""}`}
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <a
+                    href={linkHref(item.id)}
+                    data-section={item.id}
+                    className={active ? "is-active" : undefined}
+                    aria-current={active ? "true" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={servicesOpen}
+                    onClick={(e) => {
+                      if (window.matchMedia("(max-width: 900px)").matches) {
+                        e.preventDefault();
+                        setServicesOpen((open) => !open);
+                      }
+                    }}
+                  >
+                    <span>{item.label}</span>
+                    <svg className="nav-caret" viewBox="0 0 12 8" aria-hidden="true">
+                      <path d="M1.4 0L6 4.6 10.6 0 12 1.4 6 7.4 0 1.4z" />
+                    </svg>
+                  </a>
+                  <div className="nav-dropdown" role="menu">
+                    <div className="nav-dropdown-panel">
+                      {item.links.map((sub) => (
+                        <a
+                          key={sub.id}
+                          href={linkHref(sub.id)}
+                          role="menuitem"
+                          onClick={() => setServicesOpen(false)}
+                        >
+                          {sub.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
             const active = isHome && activeId === item.id;
             return (
               <a
                 key={item.id}
-                href={href}
+                href={linkHref(item.id)}
                 data-section={item.id}
                 className={active ? "is-active" : undefined}
                 aria-current={active ? "true" : undefined}

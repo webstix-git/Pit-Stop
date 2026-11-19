@@ -19,6 +19,18 @@ export default function IconSprites() {
       <symbol id="icon-clock" viewBox="0 0 24 24">
         <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11H7v-2h4V6h2v7z" />
       </symbol>
+      <symbol id="icon-cash" viewBox="0 0 24 24">
+        <path d="M3 6h18v12H3V6zm2 2v8h14V8H5zm7 1.5A2.5 2.5 0 119.5 12 2.5 2.5 0 0112 9.5zM6.5 10v4H5.2v-4h1.3zm12.3 0V14h-1.3v-4h1.3z" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="M4 5h16v14H4V5zm2 2v10h12V7H6zm2 2h8v1.5H8V9zm0 3h5v1.5H8V12zm0 3h6v1.5H8V15z" />
+      </symbol>
+      <symbol id="icon-card" viewBox="0 0 24 24">
+        <path d="M2 6h20v12H2V6zm2 2v2h16V8H4zm0 4v4h16v-4H4zm2 1.5h4V15H6v-1.5z" />
+      </symbol>
+      <symbol id="icon-venmo" viewBox="0 0 24 24">
+        <path d="M18.3 3.2c.7 1.1 1 2.2 1 3.6 0 4.5-3.8 10.4-6.9 14.5H5.7L3.4 4.6l5.2-.5 1.4 11.3c1.6-2.6 3.5-6.7 3.5-9.5 0-1.5-.3-2.6-.7-3.4l5.5-.3z" />
+      </symbol>
     </svg>
   );
 }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" fill="none">
+  <rect x="2" y="7" width="60" height="26" rx="3" fill="#3E536A"/>
+  <path d="M9 16h22M9 21h32M9 26h16" stroke="#C5D0DC" stroke-width="2" stroke-linecap="round"/>
+  <rect x="40" y="22" width="16" height="6" rx="1" fill="#2F6FED"/>
+  <path d="M43.2 25.1l2.1 2.1 4.3-4.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="9" y="13.5" font-family="Arial, Helvetica, sans-serif" font-size="5.5" font-weight="700" fill="#E8EEF5" letter-spacing=".5">CHECK</text>
+</svg>

@@ -29,22 +29,22 @@ export default function Footer() {
                 <a href="/#services">Services</a>
               </li>
               <li>
-                <a href="/#why">Why choose us</a>
+                <a href="/#about">About us</a>
               </li>
               <li>
-                <a href="/#about">About us</a>
+                <a href="/#why">Why us</a>
+              </li>
+              <li>
+                <a href="/#reviews">Customer reviews</a>
               </li>
               <li>
                 <a href="/#faq">FAQ</a>
               </li>
               <li>
-                <a href="/#reviews">Google reviews</a>
+                <a href="/#contact">Contact</a>
               </li>
               <li>
                 <a href="/#area">Service area</a>
-              </li>
-              <li>
-                <a href="/#contact">Contact</a>
               </li>
             </ul>
           </div>
