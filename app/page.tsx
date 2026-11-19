@@ -368,10 +368,14 @@ export default function HomePage() {
                 <svg className="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
                 <span className="address-block">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</span>
               </a>
-              <a className="area-phone-link" href="tel:5074935222">
-                <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
-                <span>507-493-5222</span>
-              </a>
+              <span className="area-contact-pipe" aria-hidden="true"></span>
+              <div className="area-phone-block">
+                <span className="area-call-label">Call us</span>
+                <a className="area-phone-link" href="tel:5074935222">
+                  <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+                  <span>507-493-5222</span>
+                </a>
+              </div>
             </div>
           </div>
           <a className="btn btn-red area-directions-btn" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">
