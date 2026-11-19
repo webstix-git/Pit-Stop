@@ -28,7 +28,7 @@ export default function AiReadinessPage() {
               <tr><th>Business name</th><td>Pit Stop LLC</td></tr>
               <tr><th>Business type</th><td>Automotive and equipment maintenance shop</td></tr>
               <tr><th>Established</th><td>2026</td></tr>
-              <tr><th>Address</th><td><a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a></td></tr>
+              <tr><th>Address</th><td><a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</a></td></tr>
               <tr><th>Service area</th><td>Mabel, Minnesota and the surrounding area</td></tr>
               <tr><th>Customers</th><td>Local drivers and equipment owners</td></tr>
               <tr><th>Phone</th><td><a className="phone-link" href="tel:5074935222"><svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg><span>507-493-5222</span></a></td></tr>
@@ -69,7 +69,7 @@ export default function AiReadinessPage() {
 
           <h2>Common Questions</h2>
           <p><strong>Where is Pit Stop located?</strong><br />
-          <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>.</p>
+          <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</a>.</p>
           <p><strong>What do you work on?</strong><br />
           Cars, pickups, SUVs, side-by-sides, 4-wheelers, and lawnmowers.</p>
           <p><strong>What kind of work do you do?</strong><br />

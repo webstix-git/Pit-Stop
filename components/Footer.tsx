@@ -74,7 +74,7 @@ export default function Footer() {
                   <use href="#icon-pin" />
                 </svg>
                 <span className="address-block">
-                  102 W Prairie Ave,
+                  102 W Prairie Ave.
                   <br />
                   Mabel, MN&nbsp;55954
                 </span>
@@ -95,11 +95,12 @@ export default function Footer() {
         </div>
         <div className="footer-bottom" id="footer-bottom">
           <span>© 2026 Pit Stop&nbsp;LLC</span>
-          <div className="footer-legal">
-            <a href="/privacy-policy">Privacy Policy</a>
-            <a href="/ai-policy">AI Policy</a>
-            <a href="/ai-readiness-service-index">AI Readiness Service Index</a>
-          </div>
+          <span className="footer-pipe" aria-hidden="true">|</span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <span className="footer-pipe" aria-hidden="true">|</span>
+          <a href="/ai-policy">AI Policy</a>
+          <span className="footer-pipe" aria-hidden="true">|</span>
+          <a href="/ai-readiness-service-index">AI Readiness Service Index</a>
         </div>
       </div>
     </footer>

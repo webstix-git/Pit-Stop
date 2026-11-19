@@ -55,7 +55,7 @@ export default function AiPolicyPage() {
           <h2>Questions</h2>
           <p>If you have questions about how we use AI, contact&nbsp;us:</p>
           <p><strong>Pit Stop LLC</strong><br />
-          <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a><br />
+          <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</a><br />
           <a className="phone-link" href="tel:5074935222"><svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg><span>507-493-5222</span></a><br />
           <a href="mailto:pitstopllc26@gmail.com">pitstopllc26@gmail.com</a></p>
           <p><a className="btn btn-red" href="/">Back to&nbsp;Home</a></p>

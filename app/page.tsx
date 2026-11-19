@@ -5,47 +5,29 @@ export default function HomePage() {
   return (
 <main id="top">
     <section className="hero" data-screen-label="Hero" aria-label="Hero">
-      <img className="hero-media" src="/assets/hero.png" alt="Pit Stop shop, 102 W Prairie Ave, Mabel" />
+      <img className="hero-media" src="/assets/hero.png" alt="Pit Stop shop, 102 W Prairie Ave., Mabel" />
       <div className="hero-grad-y" aria-hidden="true"></div>
       <div className="hero-grad-x" aria-hidden="true"></div>
       <div className="container hero-content">
         <div className="eyebrow">Mabel, Minnesota · Est.&nbsp;2026</div>
-        <h1>Oil, tires and brakes for whatever you <span>drive or&nbsp;mow.</span></h1>
+        <h1>Oil, tires and brakes for whatever you <span>drive or&nbsp;mow</span></h1>
         <p className="hero-lead">We&apos;re a small shop on West Prairie Avenue. Bring us the daily drivers, the weekend side-by-sides and the mower that keeps the yard looking good. When something needs fixing, we&apos;ll take care of it with care and a straight&nbsp;answer.</p>
         <div className="hero-actions">
           <a className="btn btn-red" href="#services">See our&nbsp;services</a>
           <a className="btn btn-cream" href="#about">Meet the&nbsp;shop</a>
         </div>
-        <div className="hero-meta">
-          <div>
-            <span className="meta-label">Hours</span>
-            <span className="meta-value">Mon-Fri · 8 AM - 4&nbsp;PM</span>
-          </div>
-          <div>
-            <span className="meta-label">Location</span>
-            <a className="meta-value address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
-          </div>
-          <div>
-            <span className="meta-label">Phone</span>
-            <a className="meta-value phone-link" href="tel:5074935222">
-              <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
-              507-493-5222
-            </a>
+      </div>
+      <div className="marquee">
+        <div className="container">
+          <div className="marquee-inner">
+            <span>Oil changes</span><span className="marquee-sep">/</span>
+            <span>Tire repairs</span><span className="marquee-sep">/</span>
+            <span>Brake work</span><span className="marquee-sep">/</span>
+            <span>Light maintenance</span>
           </div>
         </div>
       </div>
     </section>
-
-    <div className="marquee">
-      <div className="container">
-        <div className="marquee-inner">
-          <span>Oil changes</span><span className="marquee-sep">/</span>
-          <span>Tire repairs</span><span className="marquee-sep">/</span>
-          <span>Brake work</span><span className="marquee-sep">/</span>
-          <span>Light maintenance</span>
-        </div>
-      </div>
-    </div>
 
     <section id="vehicles" className="vehicles" data-screen-label="What We Service">
       <div className="container vehicles-inner">
@@ -211,7 +193,7 @@ export default function HomePage() {
 
     <section id="reviews" className="section reviews" data-screen-label="Customer reviews">
       <div className="container">
-        <div className="section-head">
+        <div className="section-head section-head-center">
           <div className="section-head-copy">
             <div className="eyebrow dark">Customer reviews</div>
             <h2>What people are&nbsp;saying</h2>
@@ -383,7 +365,7 @@ export default function HomePage() {
             <p>You&apos;ll find us on West Prairie Avenue. We&apos;re glad to help folks from Mabel and the towns&nbsp;nearby.</p>
             <a className="area-address-link" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">
               <svg className="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
-              <span className="address-block">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</span>
+              <span className="address-block">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</span>
             </a>
           </div>
           <a className="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
@@ -423,7 +405,7 @@ export default function HomePage() {
                 <span className="label">Address</span>
                 <a className="contact-detail-link contact-address-link" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">
                   <svg className="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
-                  <span className="address-block">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</span>
+                  <span className="address-block">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</span>
                 </a>
               </div>
               <div>
@@ -459,6 +441,11 @@ export default function HomePage() {
               <span>507-493-5222</span>
             </a>
             . We&apos;re happy to&nbsp;help.</p>
+          <img
+            className="faq-visual"
+            src="/assets/faq-utv.jpg"
+            alt="Customer in a blue Polaris RZR UTV"
+          />
         </div>
         <div className="faq-list">
           <div className="faq-item">
@@ -490,7 +477,7 @@ export default function HomePage() {
           <div className="faq-item">
             <h3 className="faq-q">Where are&nbsp;you?</h3>
             <p className="faq-a">Come see us at{" "}
-              <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a></p>
+              <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</a></p>
           </div>
           <div className="faq-item">
             <h3 className="faq-q">Anything else we should&nbsp;know?</h3>
