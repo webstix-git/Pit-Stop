@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="footer-brand">
             <img src="/assets/logo.png" alt="Pit Stop logo" />
             <div className="footer-social">
-              <span>Social Media:</span>
+              <span>Find us online</span>
               <a
                 href="https://www.facebook.com/profile.php?id=61589255056547"
                 target="_blank"
@@ -36,10 +36,10 @@ export default function Footer() {
                 <a href="/#services">Services</a>
               </li>
               <li>
-                <a href="/#about">About us</a>
+                <a href="/#why">Why us</a>
               </li>
               <li>
-                <a href="/#why">Why us</a>
+                <a href="/#about">About us</a>
               </li>
               <li>
                 <a href="/#reviews">Customer reviews</a>

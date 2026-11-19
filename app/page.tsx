@@ -11,10 +11,10 @@ export default function HomePage() {
       <div className="container hero-content">
         <div className="eyebrow">Mabel, Minnesota · Est.&nbsp;2026</div>
         <h1>Oil, tires and brakes for whatever you <span>drive or&nbsp;mow.</span></h1>
-        <p className="hero-lead">Pit Stop is a small shop on West Prairie Avenue in Mabel. We handle the everyday maintenance that keeps your car, pickup, side-by-side and lawnmower doing its job, plus the minor repairs that always seem to show up at the worst&nbsp;time.</p>
+        <p className="hero-lead">We&apos;re a small shop on West Prairie Avenue. Bring us the daily drivers, the weekend side-by-sides and the mower that keeps the yard looking good. When something needs fixing, we&apos;ll take care of it with care and a straight&nbsp;answer.</p>
         <div className="hero-actions">
-          <a className="btn btn-red" href="#services">See what we&nbsp;do</a>
-          <a className="btn btn-cream" href="#about">Read about&nbsp;us</a>
+          <a className="btn btn-red" href="#services">See our&nbsp;services</a>
+          <a className="btn btn-cream" href="#about">Meet the&nbsp;shop</a>
         </div>
         <div className="hero-meta">
           <div>
@@ -49,10 +49,10 @@ export default function HomePage() {
       <div className="container vehicles-inner">
         <div className="section-head">
           <div className="section-head-copy">
-            <div className="eyebrow dark">Drive it or mow&nbsp;it</div>
+            <div className="eyebrow dark">From the driveway to the&nbsp;yard</div>
             <h2>What we&nbsp;service</h2>
           </div>
-          <p className="section-intro vehicles-intro">Not sure we work on yours? Just ask. Chances are we can help, and if we can&apos;t, we&apos;ll tell you&nbsp;straight.</p>
+          <p className="section-intro vehicles-intro">If it rolls, rides or mows, there&apos;s a good chance we can help. Not sure? Give us a call and we&apos;ll tell you&nbsp;honestly.</p>
         </div>
         <div className="vehicles-grid">
           <article className="vehicle-card">
@@ -100,9 +100,9 @@ export default function HomePage() {
         <div className="section-head">
           <div className="section-head-copy">
             <div className="eyebrow">Services</div>
-            <h2>The routine stuff, and the&nbsp;surprises</h2>
+            <h2>Everyday care, when you need&nbsp;it</h2>
           </div>
-          <p className="section-intro">Most of what we do is regular upkeep. Some of it is a flat tire you didn&apos;t plan on. Either way, give us a call and we&apos;ll get you back on the road, the trail or the&nbsp;lawn.</p>
+          <p className="section-intro">Oil changes and tire repairs are our bread and butter. So are the unexpected flats and squeaky brakes. Call us, and we&apos;ll help get you back on the road, the trail or the&nbsp;lawn.</p>
         </div>
         <div className="services-grid">
           <article className="service-card" id="service-tires">
@@ -115,7 +115,7 @@ export default function HomePage() {
                 <span className="service-tag">Cars · Trucks ·&nbsp;UTVs</span>
               </div>
               <h3>Tires</h3>
-              <p>Flat or slow leak? We repair tires on cars, pickups, SUVs, side-by-sides and&nbsp;4-wheelers.</p>
+              <p>Flat, soft or slowly losing air? We can patch and repair tires on cars, pickups, SUVs, side-by-sides and&nbsp;4-wheelers.</p>
             </div>
           </article>
           <article className="service-card" id="service-oil">
@@ -128,7 +128,7 @@ export default function HomePage() {
                 <span className="service-tag">Everything we&nbsp;service</span>
               </div>
               <h3>Oil changes</h3>
-              <p>Fresh oil for the car you drive to work, the side-by-side you ride on weekends and the mower that keeps the yard in&nbsp;shape.</p>
+              <p>Fresh oil for the car you drive every day, the side-by-side you take out on weekends and the mower that keeps the lawn in&nbsp;shape.</p>
             </div>
           </article>
           <article className="service-card" id="service-brakes">
@@ -141,7 +141,7 @@ export default function HomePage() {
                 <span className="service-tag">Cars · Trucks ·&nbsp;UTVs</span>
               </div>
               <h3>Brake work</h3>
-              <p>Squealing, grinding or a pedal that feels soft? Bring it in and we&apos;ll take a&nbsp;look.</p>
+              <p>Hearing a squeal, a grind or feeling a soft pedal? Bring it in. We&apos;ll check it out and tell you what we&nbsp;find.</p>
             </div>
           </article>
           <article className="service-card" id="service-maintenance">
@@ -154,9 +154,34 @@ export default function HomePage() {
                 <span className="service-tag">Everything we&nbsp;service</span>
               </div>
               <h3>Light maintenance</h3>
-              <p>The smaller jobs that keep things running, and most minor repairs too. If it&apos;s on your list, ask&nbsp;us.</p>
+              <p>Filters, fluids, belts and the little jobs that keep everything running smoothly. If it&apos;s on your list, ask&nbsp;us.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" className="why" data-screen-label="Why Choose Us">
+      <div className="container why-inner">
+        <div className="eyebrow dark">Why choose us</div>
+        <h2>What you can count on at <span style={{color: 'var(--red)'}}>Pit&nbsp;Stop</span></h2>
+        <div className="why-grid">
+          <div className="why-card">
+            <h3>Honest answers</h3>
+            <p>We&apos;ll explain what needs attention now and what can safely&nbsp;wait.</p>
+          </div>
+          <div className="why-card">
+            <h3>Careful work</h3>
+            <p>We take the time to do the job right the first time, so you&apos;re not back for the same&nbsp;issue.</p>
+          </div>
+          <div className="why-card">
+            <h3>Fair pricing</h3>
+            <p>Clear pricing you can trust. No upselling, and no surprises when you pick it&nbsp;up.</p>
+          </div>
+          <div className="why-card">
+            <h3>A welcome stop</h3>
+            <p>Pull in, say hello and ask questions. That&apos;s the kind of shop we aim to&nbsp;be.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -175,33 +200,9 @@ export default function HomePage() {
         <div className="about-copy">
           <div className="eyebrow">About Pit&nbsp;Stop</div>
           <h2>A family shop in&nbsp;Mabel</h2>
-          <p>We opened Pit Stop in 2026 to give folks around Mabel one friendly place to bring all of it: the car, the pickup, the side-by-side and the&nbsp;mower.</p>
-          <p>We&apos;re a small-town business and we run it like one. You get honest answers, careful work and a fair bill, from people who are glad you stopped in. Keeping your equipment in shape shouldn&apos;t be a hassle, and we work to keep it that&nbsp;way.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="why" className="why" data-screen-label="Why Choose Us">
-      <div className="container why-inner">
-        <div className="eyebrow">Why choose us</div>
-        <h2>Why folks pick <span style={{color: 'var(--red)'}}>Pit&nbsp;Stop</span></h2>
-        <div className="why-grid">
-          <div className="why-card">
-            <h3>Honest work</h3>
-            <p>We&apos;ll tell you what needs doing now and what can&nbsp;wait.</p>
-          </div>
-          <div className="why-card">
-            <h3>Done right</h3>
-            <p>We take the time to do the job properly, so you&apos;re not back next week for the same&nbsp;thing.</p>
-          </div>
-          <div className="why-card">
-            <h3>Fair prices</h3>
-            <p>Small-town shop, small-town prices. No surprises on the&nbsp;bill.</p>
-          </div>
-          <div className="why-card">
-            <h3>Friendly service</h3>
-            <p>Pull in, say hi, ask questions. That&apos;s how a local shop should&nbsp;feel.</p>
-          </div>
+          <p>We opened Pit Stop in 2026 so neighbors around Mabel would have one friendly place for the car, the pickup, the side-by-side and the&nbsp;mower.</p>
+          <p>We run a small-town shop the way it should feel: honest conversation, careful work and a fair bill. You&apos;re always welcome to stop in with questions. Keeping your equipment ready shouldn&apos;t be a hassle, and we work hard to keep it that&nbsp;way.</p>
+          <p>Not sure if we can help with what you&apos;ve got? Just ask. We&apos;re here for maintenance and most repair needs when we can take them on, and if we can&apos;t, we&apos;ll tell you straight. We take pride in reliable service and a personal experience that makes looking after your vehicles and equipment a little&nbsp;easier.</p>
         </div>
       </div>
     </section>
@@ -211,7 +212,7 @@ export default function HomePage() {
         <div className="section-head">
           <div className="section-head-copy">
             <div className="eyebrow dark">Customer reviews</div>
-            <h2>Word around&nbsp;Mabel</h2>
+            <h2>What people are&nbsp;saying</h2>
           </div>
         </div>
         <div className="reviews-grid">
@@ -375,7 +376,7 @@ export default function HomePage() {
           </figure>
         </div>
         <div className="reviews-cta">
-          <a className="btn btn-red" href="https://www.google.com/maps/place/Pit+Stop/@43.5223361,-91.7702188,17z/data=!4m8!3m7!1s0x87fbcbc6c85e7199:0x58c40a3060250a00!8m2!3d43.5223361!4d-91.7702188!9m1!1b1!16s%2Fg%2F1thxlmmk" target="_blank" rel="noopener noreferrer">Leave us a review on&nbsp;Google</a>
+          <a className="btn btn-red" href="https://www.google.com/maps/place/Pit+Stop/@43.5223361,-91.7702188,17z/data=!4m8!3m7!1s0x87fbcbc6c85e7199:0x58c40a3060250a00!8m2!3d43.5223361!4d-91.7702188!9m1!1b1!16s%2Fg%2F1thxlmmk" target="_blank" rel="noopener noreferrer">Share your experience on&nbsp;Google</a>
         </div>
       </div>
     </section>
@@ -386,10 +387,10 @@ export default function HomePage() {
           <div className="eyebrow">Service area</div>
           <h2>Right here in&nbsp;Mabel</h2>
           <div className="area-address">
-            <p>We&apos;re on West Prairie Avenue and happy to help anyone from Mabel and the surrounding&nbsp;area.</p>
+            <p>You&apos;ll find us on West Prairie Avenue. We&apos;re glad to help folks from Mabel and the towns&nbsp;nearby.</p>
             <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
           </div>
-          <a className="btn btn-cream" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
+          <a className="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
         </div>
       </div>
       <div className="area-map">
@@ -409,7 +410,7 @@ export default function HomePage() {
         <div className="contact-info-wrap">
           <div className="contact-copy">
             <div className="eyebrow">Get in&nbsp;touch</div>
-            <h2>Make Pit Stop your next&nbsp;stop!</h2>
+            <h2>We&apos;d love to hear from&nbsp;you</h2>
             <a className="contact-phone" href="tel:5074935222">
               <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
               507-493-5222
@@ -443,13 +444,13 @@ export default function HomePage() {
       <div className="container faq-layout">
         <div className="faq-left">
           <div className="eyebrow dark">FAQ</div>
-          <h2>Before you stop&nbsp;in</h2>
-          <p>Didn&apos;t find your answer? Call us at{" "}
+          <h2>A few common&nbsp;questions</h2>
+          <p>Still wondering about something? Call us at{" "}
             <a className="phone-link faq-phone" href="tel:5074935222">
               <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
               <span>507-493-5222</span>
-            </a>.
-          </p>
+            </a>
+            . We&apos;re happy to&nbsp;help.</p>
           <img className="faq-visual" src="/assets/faq-utv.png" alt="Green side-by-side UTV" />
         </div>
         <div className="faq-list">
@@ -459,20 +460,20 @@ export default function HomePage() {
           </div>
           <div className="faq-item">
             <h3 className="faq-q">What kind of work do you&nbsp;do?</h3>
-            <p className="faq-a">Oil changes, tire repairs, brake work and other light maintenance, plus most minor&nbsp;repairs.</p>
+            <p className="faq-a">Oil changes, tire repairs, brake work, light maintenance and most minor repairs. If you&apos;re unsure, we&apos;re glad to talk it&nbsp;through.</p>
           </div>
           <div className="faq-item">
             <h3 className="faq-q">What if I&apos;m not sure you can fix&nbsp;it?</h3>
-            <p className="faq-a">Just ask. Call us{" "}
+            <p className="faq-a">Just ask. Call us at{" "}
               <a className="phone-link faq-phone" href="tel:5074935222">
                 <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
                 <span>507-493-5222</span>
-              </a>,
-              tell us what&apos;s going on, and we&apos;ll let you know whether it&apos;s something we can take care&nbsp;of.</p>
+              </a>
+              , tell us what&apos;s going on, and we&apos;ll let you know if it&apos;s something we can handle.</p>
           </div>
           <div className="faq-item">
             <h3 className="faq-q">How can I&nbsp;pay?</h3>
-            <p className="faq-a">Cash, check, credit, debit or&nbsp;Venmo.</p>
+            <p className="faq-a">We take cash, check, credit, debit or&nbsp;Venmo.</p>
             <PaymentIcons className="faq-pay-icons" />
           </div>
           <div className="faq-item">
@@ -481,11 +482,12 @@ export default function HomePage() {
           </div>
           <div className="faq-item">
             <h3 className="faq-q">Where are&nbsp;you?</h3>
-            <p className="faq-a"><a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a></p>
+            <p className="faq-a">Come see us at{" "}
+              <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>.</p>
           </div>
           <div className="faq-item">
-            <h3 className="faq-q">If you don&apos;t know if we can help, just&nbsp;ask!</h3>
-            <p className="faq-a">We are here to help if we can with all your maintenance and most of your repair needs. Make Pit Stop your next&nbsp;stop!</p>
+            <h3 className="faq-q">Anything else we should&nbsp;know?</h3>
+            <p className="faq-a">If you have a maintenance question or a repair that needs attention, reach out. If we can help, we will, and if we can&apos;t, we&apos;ll say so&nbsp;upfront.</p>
           </div>
         </div>
       </div>

@@ -3,9 +3,9 @@ export default function NotFoundPage() {
 <main>
     <section className="page-hero">
       <div className="container">
-        <div className="eyebrow">Error 404</div>
-        <h1>Page not&nbsp;found</h1>
-        <p>The page you're looking for isn't here. It may have moved, or the link might be&nbsp;outdated.</p>
+        <div className="eyebrow">404</div>
+        <h1>We can&apos;t find that&nbsp;page</h1>
+        <p>It may have moved, or the link might be a little out of&nbsp;date.</p>
       </div>
     </section>
     <div className="page-breadcrumb-bar">
@@ -16,9 +16,9 @@ export default function NotFoundPage() {
     <section className="page-content">
       <div className="container">
         <div className="thank-you-panel">
-          <p>Head home, check our services, or give the shop a&nbsp;call.</p>
+          <p>Head back home, browse our services, or give the shop a call. We&apos;re happy to help you find what you&nbsp;need.</p>
           <div>
-            <a className="btn btn-red" href="/">Back to&nbsp;Home</a>
+            <a className="btn btn-red" href="/">Back to the&nbsp;homepage</a>
           </div>
         </div>
       </div>

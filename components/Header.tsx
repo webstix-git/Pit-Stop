@@ -22,8 +22,8 @@ type NavItem =
 
 const NAV: NavItem[] = [
   { id: "services", label: "Services", dropdown: "services", links: SERVICE_LINKS },
-  { id: "about", label: "About us" },
   { id: "why", label: "Why us" },
+  { id: "about", label: "About us" },
   { id: "reviews", label: "Customer reviews" },
   { id: "area", label: "Service area" },
   { id: "contact", label: "Contact" },
@@ -34,8 +34,8 @@ const SECTION_ORDER = [
   "top",
   "vehicles",
   "services",
-  "about",
   "why",
+  "about",
   "reviews",
   "area",
   "contact",

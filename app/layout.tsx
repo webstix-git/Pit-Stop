@@ -7,6 +7,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Pit Stop · Automotive & Equipment Maintenance · Mabel, MN",
+  description:
+    "A friendly family shop in Mabel, MN for oil changes, tire repairs, brake work and light maintenance on cars, pickups, SUVs, side-by-sides, 4-wheelers and lawnmowers.",
   appleWebApp: {
     title: "Pit Stop",
   },
