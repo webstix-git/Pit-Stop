@@ -21,26 +21,25 @@ type NavItem =
     };
 
 const NAV: NavItem[] = [
-  { id: "top", label: "Home" },
   { id: "services", label: "Services", dropdown: "services", links: SERVICE_LINKS },
   { id: "about", label: "About us" },
   { id: "why", label: "Why us" },
   { id: "reviews", label: "Customer reviews" },
-  { id: "faq", label: "FAQ" },
-  { id: "contact", label: "Contact" },
   { id: "area", label: "Service area" },
+  { id: "contact", label: "Contact" },
+  { id: "faq", label: "FAQ" },
 ];
 
 const SECTION_ORDER = [
   "top",
-  "services",
   "vehicles",
+  "services",
   "about",
   "why",
   "reviews",
-  "faq",
-  "contact",
   "area",
+  "contact",
+  "faq",
 ] as const;
 
 export default function Header() {

@@ -36,7 +36,6 @@ export default function HomePage() {
       </div>
     </section>
 
-    <div className="tread" aria-hidden="true"></div>
     <div className="marquee">
       <div className="container marquee-inner">
         <span>Oil changes</span><span className="marquee-sep">/</span>
@@ -45,6 +44,56 @@ export default function HomePage() {
         <span>Light maintenance</span>
       </div>
     </div>
+
+    <section id="vehicles" className="vehicles" data-screen-label="What We Service">
+      <div className="container vehicles-inner">
+        <div className="section-head">
+          <div className="section-head-copy">
+            <div className="eyebrow dark">Drive it or mow&nbsp;it</div>
+            <h2>What we&nbsp;service</h2>
+          </div>
+          <p className="section-intro vehicles-intro">Not sure we work on yours? Just ask. Chances are we can help, and if we can&apos;t, we&apos;ll tell you&nbsp;straight.</p>
+        </div>
+        <div className="vehicles-grid">
+          <article className="vehicle-card">
+            <img src="/assets/cars.jpg" alt="Cars lined up at a service lot" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">Cars</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/pickups.jpg" alt="White pickup truck" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">Pickups</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/suvs.jpg" alt="Blue SUV parked outdoors" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">SUVs</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/utv.jpg" alt="Side-by-side" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">Side-by-sides</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/4-wheelers.jpg" alt="Red 4-wheelers on sand" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">4-wheelers</span>
+            </div>
+          </article>
+          <article className="vehicle-card">
+            <img src="/assets/lawnmowers.jpg" alt="Walk-behind lawnmower on a lawn" />
+            <div className="vehicle-label">
+              <span className="vehicle-name">Lawnmowers</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section id="services" className="section" data-screen-label="Services">
       <div className="container">
@@ -112,56 +161,6 @@ export default function HomePage() {
       </div>
     </section>
 
-    <section id="vehicles" className="vehicles" data-screen-label="What We Service">
-      <div className="container vehicles-inner">
-        <div className="section-head">
-          <div className="section-head-copy">
-            <div className="eyebrow dark">What we service</div>
-            <h2>Road, trail<br />or&nbsp;yard.</h2>
-          </div>
-          <p className="section-intro vehicles-intro">Not sure we work on yours? Just ask. Chances are we can help, and if we can&apos;t, we&apos;ll tell you&nbsp;straight.</p>
-        </div>
-        <div className="vehicles-grid">
-          <article className="vehicle-card">
-            <img src="/assets/cars.jpg" alt="Cars lined up at a service lot" />
-            <div className="vehicle-label">
-              <span className="vehicle-name">Cars</span>
-            </div>
-          </article>
-          <article className="vehicle-card">
-            <img src="/assets/pickups.jpg" alt="White pickup truck" />
-            <div className="vehicle-label">
-              <span className="vehicle-name">Pickups</span>
-            </div>
-          </article>
-          <article className="vehicle-card">
-            <img src="/assets/suvs.jpg" alt="Blue SUV parked outdoors" />
-            <div className="vehicle-label">
-              <span className="vehicle-name">SUVs</span>
-            </div>
-          </article>
-          <article className="vehicle-card">
-            <img src="/assets/utv.jpg" alt="Side-by-side" />
-            <div className="vehicle-label">
-              <span className="vehicle-name">Side-by-sides</span>
-            </div>
-          </article>
-          <article className="vehicle-card">
-            <img src="/assets/4-wheelers.jpg" alt="Red 4-wheelers on sand" />
-            <div className="vehicle-label">
-              <span className="vehicle-name">4-wheelers</span>
-            </div>
-          </article>
-          <article className="vehicle-card">
-            <img src="/assets/lawnmowers.jpg" alt="Walk-behind lawnmower on a lawn" />
-            <div className="vehicle-label">
-              <span className="vehicle-name">Lawnmowers</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="about" className="section" data-screen-label="About">
       <div className="container about-grid">
         <div className="about-photo-wrap">
@@ -184,7 +183,7 @@ export default function HomePage() {
 
     <section id="why" className="why" data-screen-label="Why Choose Us">
       <div className="container why-inner">
-        <div className="eyebrow dark">Why choose us</div>
+        <div className="eyebrow">Why choose us</div>
         <h2>Why folks pick <span style={{color: 'var(--red)'}}>Pit&nbsp;Stop</span></h2>
         <div className="why-grid">
           <div className="why-card">
@@ -211,7 +210,7 @@ export default function HomePage() {
       <div className="container">
         <div className="section-head">
           <div className="section-head-copy">
-            <div className="eyebrow">Customer reviews</div>
+            <div className="eyebrow dark">Customer reviews</div>
             <h2>Word around&nbsp;Mabel</h2>
           </div>
         </div>
@@ -381,6 +380,65 @@ export default function HomePage() {
       </div>
     </section>
 
+    <section id="area" className="area" data-screen-label="Service Area">
+      <div className="area-copy-wrap">
+        <div className="area-copy">
+          <div className="eyebrow">Service area</div>
+          <h2>Right here in&nbsp;Mabel</h2>
+          <div className="area-address">
+            <p>We&apos;re on West Prairie Avenue and happy to help anyone from Mabel and the surrounding&nbsp;area.</p>
+            <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
+          </div>
+          <a className="btn btn-cream" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
+        </div>
+      </div>
+      <div className="area-map">
+        <iframe
+          title="Map to Pit Stop"
+          src="https://www.google.com/maps?q=102+W+Prairie+Ave,+Mabel,+MN+55954&z=15&output=embed"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen></iframe>
+      </div>
+    </section>
+
+    <div className="tread-2" aria-hidden="true"></div>
+
+    <section id="contact" className="section contact" data-screen-label="Contact">
+      <div className="container contact-grid">
+        <div className="contact-info-wrap">
+          <div className="contact-copy">
+            <div className="eyebrow">Get in&nbsp;touch</div>
+            <h2>Make Pit Stop your next&nbsp;stop!</h2>
+            <a className="contact-phone" href="tel:5074935222">
+              <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+              507-493-5222
+            </a>
+            <div className="contact-details">
+              <div>
+                <span className="label">Email</span>
+                <a href="mailto:pitstopllc26@gmail.com">pitstopllc26@gmail.com</a>
+              </div>
+              <div>
+                <span className="label">Address</span>
+                <a className="contact-address-link address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
+              </div>
+              <div>
+                <span className="label">Hours</span>
+                <span className="value">Mon - Fri: 8:00 am - 4:00&nbsp;pm<br />Sat &amp; Sun:&nbsp;Closed</span>
+              </div>
+              <div className="contact-pay">
+                <span className="label">Payment</span>
+                <span className="value">Cash, check, credit, debit or&nbsp;Venmo</span>
+                <PaymentIcons />
+              </div>
+            </div>
+          </div>
+        </div>
+        <ContactForm />
+      </div>
+    </section>
+
     <section id="faq" className="section faq" data-screen-label="FAQ">
       <div className="container faq-layout">
         <div className="faq-left">
@@ -392,7 +450,7 @@ export default function HomePage() {
               <span>507-493-5222</span>
             </a>.
           </p>
-          <img className="faq-tires" src="/assets/tires.png" alt="Stack of tires" />
+          <img className="faq-visual" src="/assets/faq-utv.png" alt="Green side-by-side UTV" />
         </div>
         <div className="faq-list">
           <div className="faq-item">
@@ -430,64 +488,6 @@ export default function HomePage() {
             <p className="faq-a">We are here to help if we can with all your maintenance and most of your repair needs. Make Pit Stop your next&nbsp;stop!</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div className="tread-2" aria-hidden="true"></div>
-
-    <section id="contact" className="section contact" data-screen-label="Contact">
-      <div className="container contact-grid">
-        <div className="contact-info-wrap">
-          <div className="contact-copy">
-            <div className="eyebrow">Get in&nbsp;touch</div>
-            <h2>Make Pit Stop your next&nbsp;stop!</h2>
-            <a className="contact-phone" href="tel:5074935222">
-              <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
-              507-493-5222
-            </a>
-            <div className="contact-details">
-              <div>
-                <span className="label">Email</span>
-                <a href="mailto:pitstopllc26@gmail.com">pitstopllc26@gmail.com</a>
-              </div>
-              <div>
-                <span className="label">Address</span>
-                <a className="contact-address-link address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
-              </div>
-              <div>
-                <span className="label">Hours</span>
-                <span className="value">Mon - Fri: 8:00 am - 4:00&nbsp;pm<br />Sat &amp; Sun:&nbsp;Closed</span>
-              </div>
-              <div className="contact-pay">
-                <span className="label">Payment</span>
-                <PaymentIcons />
-              </div>
-            </div>
-          </div>
-        </div>
-        <ContactForm />
-      </div>
-    </section>
-
-    <section id="area" className="area" data-screen-label="Service Area">
-      <div className="area-copy-wrap">
-        <div className="area-copy">
-          <div className="eyebrow">Service area</div>
-          <h2>Right here in&nbsp;Mabel</h2>
-          <div className="area-address">
-            <p>We&apos;re on West Prairie Avenue and happy to help anyone from Mabel and the surrounding&nbsp;area.</p>
-            <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
-          </div>
-          <a className="btn btn-cream" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
-        </div>
-      </div>
-      <div className="area-map">
-        <iframe
-          title="Map to Pit Stop"
-          src="https://www.google.com/maps?q=102+W+Prairie+Ave,+Mabel,+MN+55954&z=15&output=embed"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen></iframe>
       </div>
     </section>
 

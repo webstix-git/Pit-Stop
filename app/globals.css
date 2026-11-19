@@ -538,6 +538,10 @@ h3 {
   text-transform: uppercase;
 }
 
+#about {
+  background: #F2F0EC;
+  color: var(--ink);
+}
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
@@ -608,24 +612,23 @@ h3 {
   top: 120px;
   align-self: start;
 }
-.about-copy p { color: #C9CBCF; }
+.about-copy p { color: #4A4D52; }
 
 .why {
   position: relative;
   padding: 128px 0;
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--bg-2);
+  color: var(--cream);
   overflow: hidden;
 }
 .why::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/assets/tire-tracks-dark.png") center / cover no-repeat;
+  background: url("/assets/tire-tracks-grey.png") center / cover no-repeat;
   opacity: 0.16;
   pointer-events: none;
   z-index: 0;
-  mix-blend-mode: multiply;
 }
 .why-inner {
   position: relative;
@@ -660,19 +663,16 @@ h3 {
 
 .reviews {
   position: relative;
-  background: var(--bg-2);
+  background: #F2F0EC;
+  color: var(--ink);
   overflow: hidden;
 }
 .reviews::before {
   content: "";
   position: absolute;
-  /* Extend past section edges so the track covers top and bottom fully */
-  top: -8%;
-  bottom: -8%;
-  left: 0;
-  right: 0;
-  background: url("/assets/tire-tracks-grey.png") center / cover no-repeat;
-  opacity: 0.16;
+  inset: 0;
+  background: url("/assets/reviews-bg.jpg") center / cover no-repeat;
+  opacity: 0.18;
   pointer-events: none;
   z-index: 0;
 }
@@ -685,7 +685,8 @@ h3 {
 }
 .review-card {
   margin: 0;
-  background: #2A2D32;
+  background: #fff;
+  color: var(--ink);
   padding: 40px 34px;
   display: flex;
   flex-direction: column;
@@ -705,14 +706,14 @@ h3 {
   margin: 0;
   font-size: 19px;
   line-height: 1.55;
-  color: #E3E1DC;
+  color: #4A4D52;
 }
 .review-card figcaption {
   display: flex;
   flex-direction: column;
   gap: 6px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(14, 15, 17, 0.12);
 }
 .review-author {
   display: flex;
@@ -729,10 +730,11 @@ h3 {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  color: var(--ink);
 }
 .review-time {
   font-size: 14px;
-  color: var(--muted-2);
+  color: #6B6E74;
   padding-left: 28px;
 }
 .reviews-cta {
@@ -776,10 +778,12 @@ h3 {
   height: 1em;
   vertical-align: middle;
 }
-.faq-tires {
-  width: min(100%, 320px);
+.faq-visual {
+  width: min(100%, 360px);
   margin-top: 18px;
   height: auto;
+  display: block;
+  background: transparent;
 }
 .faq-list {
   flex: 2 1 520px;
@@ -811,17 +815,17 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 .pay-icons.faq-pay-icons {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 .pay-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 40px;
+  width: 40px;
+  height: 26px;
   padding: 0;
   background: transparent;
   border: 0;
@@ -834,12 +838,40 @@ h3 {
   object-fit: contain;
   display: block;
 }
+.faq-pay-icons .pay-badge {
+  width: 40px;
+  height: 26px;
+}
 .contact-pay .pay-badge {
-  width: 52px;
-  height: 32px;
+  width: 40px;
+  height: 26px;
 }
 .contact-details .contact-pay {
   gap: 10px;
+}
+.footer-pay {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-pay .label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+.footer-pay .pay-badge {
+  width: 36px;
+  height: 24px;
+}
+.footer-brand .footer-hours {
+  margin-top: 4px;
+  padding-top: 0;
+  border-top: 0;
 }
 
 .area {
@@ -964,7 +996,7 @@ h3 {
 .contact-address-link:hover { color: var(--red); }
 
 .contact-form {
-  background: #2A2D32;
+  background: var(--ink);
   color: var(--cream);
   padding: 44px 40px;
   display: flex;

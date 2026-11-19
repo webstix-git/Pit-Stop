@@ -1,3 +1,5 @@
+import PaymentIcons from "./PaymentIcons";
+
 export default function Footer() {
   return (
     <footer className="site-footer" id="footer">
@@ -18,13 +20,18 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
+            <div className="footer-hours">
+              <span className="label">Business hours</span>
+              <p>
+                Mon - Fri: 8:00 am - 4:00&nbsp;pm
+                <br />
+                Sat &amp; Sun:&nbsp;Closed
+              </p>
+            </div>
           </div>
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li>
-                <a href="/#top">Home</a>
-              </li>
               <li>
                 <a href="/#services">Services</a>
               </li>
@@ -38,13 +45,13 @@ export default function Footer() {
                 <a href="/#reviews">Customer reviews</a>
               </li>
               <li>
-                <a href="/#faq">FAQ</a>
+                <a href="/#area">Service area</a>
               </li>
               <li>
                 <a href="/#contact">Contact</a>
               </li>
               <li>
-                <a href="/#area">Service area</a>
+                <a href="/#faq">FAQ</a>
               </li>
             </ul>
           </div>
@@ -79,13 +86,9 @@ export default function Footer() {
                 pitstopllc26@gmail.com
               </a>
             </div>
-            <div className="footer-hours">
-              <span className="label">Business hours</span>
-              <p>
-                Mon - Fri: 8:00 am - 4:00&nbsp;pm
-                <br />
-                Sat &amp; Sun:&nbsp;Closed
-              </p>
+            <div className="footer-pay">
+              <span className="label">Payment</span>
+              <PaymentIcons />
             </div>
           </div>
         </div>
