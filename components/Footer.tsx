@@ -7,54 +7,8 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <img src="/assets/logo.png" alt="Pit Stop logo" />
-            <div className="footer-social">
-              <span>Find us online</span>
-              <a
-                href="https://www.facebook.com/profile.php?id=61589255056547"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <svg className="icon" aria-hidden="true">
-                  <use href="#icon-facebook" />
-                </svg>
-              </a>
-            </div>
-            <div className="footer-hours">
-              <span className="label">Business hours</span>
-              <p>
-                Mon - Fri: 8:00 am - 4:00&nbsp;pm
-                <br />
-                Sat &amp; Sun:&nbsp;Closed
-              </p>
-            </div>
           </div>
-          <div className="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li>
-                <a href="/#services">Services</a>
-              </li>
-              <li>
-                <a href="/#why">Why us</a>
-              </li>
-              <li>
-                <a href="/#about">About us</a>
-              </li>
-              <li>
-                <a href="/#reviews">Customer reviews</a>
-              </li>
-              <li>
-                <a href="/#area">Service area</a>
-              </li>
-              <li>
-                <a href="/#contact">Contact</a>
-              </li>
-              <li>
-                <a href="/#faq">FAQ</a>
-              </li>
-            </ul>
-          </div>
+
           <div className="footer-col">
             <h4>Contact</h4>
             <div className="footer-contact-list">
@@ -85,6 +39,57 @@ export default function Footer() {
                 </svg>
                 pitstopllc26@gmail.com
               </a>
+            </div>
+          </div>
+
+          <div className="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <a href="/#services">Services</a>
+              </li>
+              <li>
+                <a href="/#why">Why us</a>
+              </li>
+              <li>
+                <a href="/#about">About us</a>
+              </li>
+              <li>
+                <a href="/#reviews">Customer reviews</a>
+              </li>
+              <li>
+                <a href="/#area">Service area</a>
+              </li>
+              <li>
+                <a href="/#contact">Contact</a>
+              </li>
+              <li>
+                <a href="/#faq">FAQ</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-col footer-meta">
+            <div className="footer-social">
+              <span>Find us online</span>
+              <a
+                href="https://www.facebook.com/profile.php?id=61589255056547"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <svg className="icon" aria-hidden="true">
+                  <use href="#icon-facebook" />
+                </svg>
+              </a>
+            </div>
+            <div className="footer-hours">
+              <span className="label">Business hours</span>
+              <p>
+                Mon - Fri: 8:00 am - 4:00&nbsp;pm
+                <br />
+                Sat &amp; Sun:&nbsp;Closed
+              </p>
             </div>
             <div className="footer-pay">
               <span className="label">Payment</span>

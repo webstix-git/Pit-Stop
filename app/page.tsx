@@ -363,12 +363,21 @@ export default function HomePage() {
           <h2>Right here in&nbsp;Mabel</h2>
           <div className="area-address">
             <p>You&apos;ll find us on West Prairie Avenue. We&apos;re glad to help folks from Mabel and the towns&nbsp;nearby.</p>
-            <a className="area-address-link" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">
-              <svg className="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
-              <span className="address-block">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</span>
-            </a>
+            <div className="area-contact-row">
+              <a className="area-address-link" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">
+                <svg className="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+                <span className="address-block">102 W Prairie Ave.<br />Mabel, MN&nbsp;55954</span>
+              </a>
+              <a className="area-phone-link" href="tel:5074935222">
+                <svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+                <span>507-493-5222</span>
+              </a>
+            </div>
           </div>
-          <a className="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
+          <a className="btn btn-red area-directions-btn" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">
+            <svg className="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+            Get directions
+          </a>
         </div>
       </div>
       <div className="area-map-wrap">
