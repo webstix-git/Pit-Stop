@@ -88,6 +88,7 @@ export default function Footer() {
             </div>
             <div className="footer-pay">
               <span className="label">Payment</span>
+              <span className="footer-pay-text">Cash, check, credit, debit or&nbsp;Venmo</span>
               <PaymentIcons />
             </div>
           </div>

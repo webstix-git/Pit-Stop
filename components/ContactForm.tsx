@@ -2,22 +2,41 @@
 
 import { FormEvent, useState } from "react";
 
+const REQUIRED_FIELDS = [
+  { name: "name", label: "Name" },
+  { name: "phone", label: "Phone number" },
+  { name: "vehicle", label: "Vehicle or equipment" },
+] as const;
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [missingFields, setMissingFields] = useState<string[]>([]);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     const form = e.currentTarget;
     setSubmitted(true);
 
-    if (!form.checkValidity()) {
+    const missing = REQUIRED_FIELDS.filter(({ name }) => {
+      const el = form.elements.namedItem(name);
+      if (!(el instanceof HTMLInputElement || el instanceof HTMLSelectElement || el instanceof HTMLTextAreaElement)) {
+        return false;
+      }
+      return !el.checkValidity();
+    }).map(({ label }) => label);
+
+    if (missing.length > 0 || !form.checkValidity()) {
       e.preventDefault();
-      setHasError(true);
+      setMissingFields(missing);
       return;
     }
 
-    setHasError(false);
+    setMissingFields([]);
   };
+
+  const errorMessage =
+    missingFields.length > 0
+      ? `Please complete the required fields so we can get back to you: ${missingFields.join(", ")}. The message field is optional.`
+      : null;
 
   return (
     <form
@@ -30,16 +49,18 @@ export default function ContactForm() {
     >
       <div className="form-fields">
         <h3>Tell us how we can&nbsp;help</h3>
-        <p className="form-note">Fields with an asterisk (*) are&nbsp;required.</p>
-        {hasError ? (
+        <p className="form-note">
+          Required fields are marked with an asterisk&nbsp;(*).
+        </p>
+        {errorMessage ? (
           <p className="form-error" role="alert">
-            Please complete the required fields so we can get back to&nbsp;you.
+            {errorMessage}
           </p>
         ) : null}
         <div className="form-row">
           <label className="field">
             <span className="field-label">
-              Your name<span className="req">*</span>
+              Name<span className="req">*</span>
             </span>
             <input type="text" name="name" autoComplete="name" required />
           </label>
@@ -52,10 +73,10 @@ export default function ContactForm() {
         </div>
         <label className="field">
           <span className="field-label">
-            What are you bringing in?<span className="req">*</span>
+            Vehicle or equipment<span className="req">*</span>
           </span>
           <select name="vehicle" required>
-            <option value="">Choose one</option>
+            <option value="">Select an option</option>
             <option>Car, pickup or&nbsp;SUV</option>
             <option>Side-by-side /&nbsp;UTV</option>
             <option>4-wheeler</option>
@@ -64,8 +85,12 @@ export default function ContactForm() {
           </select>
         </label>
         <label className="field">
-          <span className="field-label">What&apos;s going on?</span>
-          <textarea name="message" rows={4} placeholder="A short note helps us prepare for your visit."></textarea>
+          <span className="field-label">Service details</span>
+          <textarea
+            name="message"
+            rows={4}
+            placeholder="Optional: briefly describe the issue or service you need."
+          ></textarea>
         </label>
         <button className="form-submit" type="submit">
           Send message

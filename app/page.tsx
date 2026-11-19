@@ -37,11 +37,13 @@ export default function HomePage() {
     </section>
 
     <div className="marquee">
-      <div className="container marquee-inner">
-        <span>Oil changes</span><span className="marquee-sep">/</span>
-        <span>Tire repairs</span><span className="marquee-sep">/</span>
-        <span>Brake work</span><span className="marquee-sep">/</span>
-        <span>Light maintenance</span>
+      <div className="container">
+        <div className="marquee-inner">
+          <span>Oil changes</span><span className="marquee-sep">/</span>
+          <span>Tire repairs</span><span className="marquee-sep">/</span>
+          <span>Brake work</span><span className="marquee-sep">/</span>
+          <span>Light maintenance</span>
+        </div>
       </div>
     </div>
 
@@ -227,7 +229,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Nicholas Martins</span>
               </div>
-              <span className="review-time">a month ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★★</div>
@@ -245,7 +246,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Nathan</span>
               </div>
-              <span className="review-time">a week ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★★</div>
@@ -262,7 +262,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Lee Senne</span>
               </div>
-              <span className="review-time">5 years ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★★</div>
@@ -280,7 +279,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Juan Rosas</span>
               </div>
-              <span className="review-time">4 years ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★</div>
@@ -298,7 +296,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Bob Snedden-Fitler</span>
               </div>
-              <span className="review-time">7 years ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★★</div>
@@ -316,7 +313,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Chris Sauer</span>
               </div>
-              <span className="review-time">9 years ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★★</div>
@@ -334,7 +330,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Senne Outdoors</span>
               </div>
-              <span className="review-time">6 years ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★★</div>
@@ -351,7 +346,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Justin Trosper</span>
               </div>
-              <span className="review-time">7 years ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★★</div>
@@ -368,7 +362,6 @@ export default function HomePage() {
                 </svg>
                 <span className="review-name">Amber Helgeson</span>
               </div>
-              <span className="review-time">9 years ago</span>
             </figcaption>
             <div className="review-body">
               <div className="review-stars">★★★★</div>
@@ -388,22 +381,25 @@ export default function HomePage() {
           <h2>Right here in&nbsp;Mabel</h2>
           <div className="area-address">
             <p>You&apos;ll find us on West Prairie Avenue. We&apos;re glad to help folks from Mabel and the towns&nbsp;nearby.</p>
-            <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
+            <a className="area-address-link" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">
+              <svg className="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+              <span className="address-block">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</span>
+            </a>
           </div>
           <a className="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">Get directions</a>
         </div>
       </div>
-      <div className="area-map">
-        <iframe
-          title="Map to Pit Stop"
-          src="https://www.google.com/maps?q=102+W+Prairie+Ave,+Mabel,+MN+55954&z=15&output=embed"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen></iframe>
+      <div className="area-map-wrap">
+        <div className="area-map">
+          <iframe
+            title="Map to Pit Stop"
+            src="https://www.google.com/maps?q=102+W+Prairie+Ave,+Mabel,+MN+55954&z=15&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen></iframe>
+        </div>
       </div>
     </section>
-
-    <div className="tread-2" aria-hidden="true"></div>
 
     <section id="contact" className="section contact" data-screen-label="Contact">
       <div className="container contact-grid">
@@ -418,19 +414,31 @@ export default function HomePage() {
             <div className="contact-details">
               <div>
                 <span className="label">Email</span>
-                <a href="mailto:pitstopllc26@gmail.com">pitstopllc26@gmail.com</a>
+                <a className="contact-detail-link" href="mailto:pitstopllc26@gmail.com">
+                  <svg className="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+                  <span>pitstopllc26@gmail.com</span>
+                </a>
               </div>
               <div>
                 <span className="label">Address</span>
-                <a className="contact-address-link address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>
+                <a className="contact-detail-link contact-address-link" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">
+                  <svg className="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+                  <span className="address-block">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</span>
+                </a>
               </div>
               <div>
                 <span className="label">Hours</span>
-                <span className="value">Mon - Fri: 8:00 am - 4:00&nbsp;pm<br />Sat &amp; Sun:&nbsp;Closed</span>
+                <span className="contact-detail-static">
+                  <svg className="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+                  <span className="value">Mon - Fri: 8:00 am - 4:00&nbsp;pm<br />Sat &amp; Sun:&nbsp;Closed</span>
+                </span>
               </div>
               <div className="contact-pay">
                 <span className="label">Payment</span>
-                <span className="value">Cash, check, credit, debit or&nbsp;Venmo</span>
+                <span className="contact-detail-static">
+                  <svg className="icon" aria-hidden="true"><use href="#icon-card"></use></svg>
+                  <span className="value">Cash, check, credit, debit or&nbsp;Venmo</span>
+                </span>
                 <PaymentIcons />
               </div>
             </div>
@@ -451,7 +459,6 @@ export default function HomePage() {
               <span>507-493-5222</span>
             </a>
             . We&apos;re happy to&nbsp;help.</p>
-          <img className="faq-visual" src="/assets/faq-utv.png" alt="Green side-by-side UTV" />
         </div>
         <div className="faq-list">
           <div className="faq-item">
@@ -483,7 +490,7 @@ export default function HomePage() {
           <div className="faq-item">
             <h3 className="faq-q">Where are&nbsp;you?</h3>
             <p className="faq-a">Come see us at{" "}
-              <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>.</p>
+              <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a></p>
           </div>
           <div className="faq-item">
             <h3 className="faq-q">Anything else we should&nbsp;know?</h3>

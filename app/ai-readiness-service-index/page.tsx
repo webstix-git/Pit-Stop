@@ -28,10 +28,10 @@ export default function AiReadinessPage() {
               <tr><th>Business name</th><td>Pit Stop LLC</td></tr>
               <tr><th>Business type</th><td>Automotive and equipment maintenance shop</td></tr>
               <tr><th>Established</th><td>2026</td></tr>
-              <tr><th>Address</th><td>102 W Prairie Ave, Mabel, MN 55954</td></tr>
+              <tr><th>Address</th><td><a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a></td></tr>
               <tr><th>Service area</th><td>Mabel, Minnesota and the surrounding area</td></tr>
               <tr><th>Customers</th><td>Local drivers and equipment owners</td></tr>
-              <tr><th>Phone</th><td><a className="phone-link" href="tel:5074935222"><svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg> 507-493-5222</a></td></tr>
+              <tr><th>Phone</th><td><a className="phone-link" href="tel:5074935222"><svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg><span>507-493-5222</span></a></td></tr>
               <tr><th>Email</th><td><a href="mailto:pitstopllc26@gmail.com">pitstopllc26@gmail.com</a></td></tr>
               <tr><th>Hours</th><td>Monday through Friday, 8:00 am to 4:00 pm; closed Saturday and Sunday</td></tr>
               <tr><th>Payment</th><td>Cash, check, credit, debit, Venmo</td></tr>
@@ -69,13 +69,13 @@ export default function AiReadinessPage() {
 
           <h2>Common Questions</h2>
           <p><strong>Where is Pit Stop located?</strong><br />
-          102 W Prairie Ave, Mabel, MN 55954.</p>
+          <a className="address-block" href="https://www.google.com/maps/dir/?api=1&destination=102+W+Prairie+Ave+Mabel+MN+55954" target="_blank" rel="noopener noreferrer">102 W Prairie Ave,<br />Mabel, MN&nbsp;55954</a>.</p>
           <p><strong>What do you work on?</strong><br />
           Cars, pickups, SUVs, side-by-sides, 4-wheelers, and lawnmowers.</p>
           <p><strong>What kind of work do you do?</strong><br />
           Oil changes, tire repairs, brake work, light maintenance, and most minor repairs.</p>
           <p><strong>How do I get in touch?</strong><br />
-          Call <a className="phone-link" href="tel:5074935222"><svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg> 507-493-5222</a>, email <a href="mailto:pitstopllc26@gmail.com">pitstopllc26@gmail.com</a>, or use the form on our Contact&nbsp;section.</p>
+          Call <a className="phone-link" href="tel:5074935222"><svg className="icon" aria-hidden="true"><use href="#icon-phone"></use></svg><span>507-493-5222</span></a>, email <a href="mailto:pitstopllc26@gmail.com">pitstopllc26@gmail.com</a>, or use the form on our Contact&nbsp;section.</p>
           <p><a className="btn btn-red" href="/">Back to&nbsp;Home</a></p>
         </div>
       </div>
